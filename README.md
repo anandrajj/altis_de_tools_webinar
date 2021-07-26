@@ -1,13 +1,14 @@
 ## **Introduction**
 
-The steps to be described here are targeted towards professionals who already work with Data but want to start on the journey of cloud and open source. Below steps, helps them to setup their laptop. Also, provides introduction to deploying databases using devlops tools and writing serverless Rest APIs.
+The steps to be described here are targeted towards professionals who already work with Data but want to start on the journey of cloud and open source. Below steps, helps them to setup their laptop. Also, provides introduction to deploying databases using DevOps tools and writing serverless Rest APIs.
 
-I feel it is mandatory for anyone working as developer in cloud space must have access to Linux terminal and Docker in their local environment. For Windows users, Linux is not available by default. So, I am covering the steps to setup Linux as an App on Windows 10.
+I believe it is mandatory for anyone working as developer in cloud space to have access to Linux terminal and Docker in their local environment. For Windows users, Linux is not available by default. So, I am covering the steps to setup Linux as an App on Windows 10.
 
 ## **Agenda**
 
 - Installing Ubuntu on Windows 10
 - Running Docker natively on WSL2
+- Useful data tools in Linux
 - VS Code for Data Engineering
 - Build API Using serverless Code
 
@@ -58,7 +59,11 @@ cat json/sample.json | jq -r '.CUSTOMER| map([.C_CUSTOMER_SK,.C_CUSTOMER_ID,.C_C
 ```
 2. Word count using linux 
 ```bash
-cat text/random.txt | sed 's/\s\+/\n/g' | sed 's/\.//' | sed '/^[[:space:]]*$/d' | sort | uniq -c | sort -rh | head
+cat data/text/random.txt | sed 's/\s\+/\n/g' | sed 's/\.//' | sed '/^[[:space:]]*$/d' | sort | uniq -c | sort -rh | head
+```
+3. Word count using awk
+```bash
+awk '{for(i=1;i<=NF;i++) a[$i]++} END {for(k in a) print k,a[k]}' data/text/random.txt
 ```
 
 ## **Get VS Code**

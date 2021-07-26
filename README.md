@@ -1,3 +1,9 @@
+## **Introduction**
+
+The steps to be described here are targeted towards professionals who already work with Data but want to start on the journey of cloud and open source. Below steps, helps them to setup their laptop. Also, provides introduction to deploying databases using devlops tools and writing serverless Rest APIs.
+
+I feel it is mandatory for anyone working as developer in cloud space must have access to Linux terminal and Docker in their local environment. For Windows users, Linux is not available by default. So, I am covering the steps to setup Linux as an App on Windows 10.
+
 ## **Agenda**
 
 - Installing Ubuntu on Windows 10
@@ -84,7 +90,7 @@ liquibase --changeLogFile=samplechangelog.h2.sql --username=$username --password
 ```
 6. Explore the created tables in Snowflake
 
-## *Setting up a Serverless project ##
+## **Setting up a Serverless project**
 1. Install node & npm
 ```
 sudo apt install nodejs

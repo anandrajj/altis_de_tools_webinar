@@ -80,5 +80,27 @@ create database webinar;
 ```
 5. Deploy tables to the database
 ```bash
-liquibase --changeLogFile=samplechangelog.h2.sql --username=anandrajj --password=$password --url="""jdbc:snowflake://gc60928.ap-southeast-2.snowflakecomputing.com/?db=webinar&schema=public""" update
+liquibase --changeLogFile=samplechangelog.h2.sql --username=$username --password=$password --url="""jdbc:snowflake://$account.ap-southeast-2.snowflakecomputing.com/?db=webinar&schema=public""" update
 ```
+6. Explore the created tables in Snowflake
+
+## *Setting up a Serverless project ##
+1. Install node & npm
+```
+sudo apt install nodejs
+```
+2. Install/Upgrade serverless framework
+```
+sudo npm install -g serverless
+sudo npm update -g serverless
+```
+3. Create a python3 aws lambda project using templates under `serverless` folder.
+```
+sls create --template aws-python3
+``` 
+4. Update the code to generate an API.
+5. Deploy stack
+```
+sls deploy
+```
+6. Test api using `Thunder client`

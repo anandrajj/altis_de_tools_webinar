@@ -45,7 +45,7 @@ I believe it is mandatory for anyone working as developer in cloud space to have
     ```
 ## **Running Docker on WSL2**
     
-1. Download & Install Docker Desktop for Windows
+1. Download & Install [Docker Desktop for Windows](https://desktop.docker.com/win/stable/amd64/Docker%20Desktop%20Installer.exe)
 2. In Docker, select `Settings > General` and check `User WSL 2 based engine`. Then restart Docker.
 3. Go to Settings > Resources > WSL Integration, select `Enable intergration with my default WSL distro`.
 4. Test docker is working using 

@@ -36,12 +36,13 @@ I believe it is mandatory for anyone working as developer in cloud space to have
     ```PowerShell
     wsl -l -v
     wsl --set-default-version 2
-    wsl --set-default Ubuntu-20.04
     ```
-
 - #### Step 5: Install your preferred Linux distribution
     From `Microsoft Store` install the Linux
-
+- #### Step 6: Set default Distro
+    ```
+    wsl --set-default Ubuntu-20.04
+    ```
 ## **Running Docker on WSL2**
     
 1. Download & Install Docker Desktop for Windows

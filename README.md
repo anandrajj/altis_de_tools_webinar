@@ -22,7 +22,7 @@ I believe it is mandatory for anyone working as developer in cloud space to have
     ```
     > Restart machine
 
-- #### **Step 2: Enable the Windows Subsystem for Linux**
+- #### **Step 2: Enable the Virtual Machine Platform**
 
     ```PowerShell
     dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
@@ -97,6 +97,14 @@ liquibase --changeLogFile=samplechangelog.h2.sql --username=$username --password
 6. Explore the created tables in Snowflake
 
 ## **Setting up a Serverless project**
+1. Install AWS CLI
+```
+sudo apt install awscli 
+```
+1. [Configure AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) providing Access Key and Secrete Key.
+```
+aws configure
+```
 1. Install node & npm
 ```
 sudo apt install nodejs
@@ -115,4 +123,4 @@ sls create --template aws-python3
 ```
 sls deploy
 ```
-6. Test api using `Thunder client`
+6. Test api using `Thunder client` VS Code extension
